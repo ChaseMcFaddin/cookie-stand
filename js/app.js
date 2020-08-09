@@ -1,317 +1,387 @@
 'use strict';
 
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+// function getRandom(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+// }
+
+//------------------------------- LAB 06 OBJECTS/METHODS ---------------------------------//
+
+// var seattle = {
+//   name: seattle,
+//   minCust: 23,
+//   maxCust: 65,
+//   avgCookieCust: 6.3,
+//   openTime: 6,
+//   closeTime: 20,
+//   cookieArray: [],
+//   dailyTotal: 0,
+
+//   calcCookiesPerHour: function () {
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
+//       this.cookieArray[i - this.openTime] = hourlyTotal;
+//       this.dailyTotal += hourlyTotal;
+//     }
+//   }
+// };
+// seattle.calcCookiesPerHour();
+
+
+// // here I am generating a random number within the minCust/maxCust range //
+
+// //   calcCustPerHour: function () {
+// //     var getCust = getRandom();
+// //     while (getCust < this.minCust || getCust > this.maxCust) {
+// //       getCust = getRandom();
+// //     }
+// //     return getCust;
+// //   },
+
+// //   //here I am returning two arrays within one array. This includes the hour and cookies //
+
+// //   calcCookiePerHour: function () {
+// //     var perHour = [];
+// //     var hour = [];
+// //     for (var i = this.openTime; i < this.closeTime; i++) {
+// //       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
+// //     }
+// //     return [hour, perHour];
+// //   }
+// // };
+
+
+// var tokyo = {
+//   name: tokyo,
+//   minCust: 3,
+//   maxCust: 24,
+//   avgCookieCust: 1.2,
+//   openTime: 6,
+//   closeTime: 20,
+//   cookieArray: [],
+//   dailyTotal: 0,
+
+//   // streamlined with an array //
+
+//   calcCookiesPerHour: function () {
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
+//       this.cookieArray[i - this.openTime] = hourlyTotal;
+//       this.dailyTotal += hourlyTotal;
+//     }
+//   }
+// };
+// tokyo.calcCookiesPerHour();
+
+// //   // here I am generating a random number within the minCust/maxCust range //
+
+// //   calcCustPerHour: function () {
+// //     var getCust = getRandom();
+// //     while (getCust < this.minCust || getCust > this.maxCust) {
+// //       getCust = getRandom();
+// //     }
+// //     return getCust;
+// //   },
+
+// //   //here I am returning two arrays within one array. This includes the hour and cookies //
+
+// //   calcCookiePerHour: function () {
+// //     var perHour = [];
+// //     var hour = [];
+// //     for (var i = this.openTime; i < this.closeTime; i++) {
+// //       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
+// //     }
+// //     return [hour, perHour];
+// //   }
+// // };
+
+// var dubai = {
+//   name: dubai,
+//   minCust: 11,
+//   maxCust: 38,
+//   avgCookieCust: 3.7,
+//   openTime: 6,
+//   closeTime: 20,
+//   cookieArray: [],
+//   dailyTotal: 0,
+
+
+//   // streamlined with an array //
+
+//   calcCookiesPerHour: function () {
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
+//       this.cookieArray[i - this.openTime] = hourlyTotal;
+//       this.dailyTotal += hourlyTotal;
+//     }
+//   }
+// };
+// dubai.calcCookiesPerHour();
+
+// here I am generating a random number within the minCust/maxCust range //
+
+//   calcCustPerHour: function () {
+//     var getCust = getRandom();
+//     while (getCust < this.minCust || getCust > this.maxCust) {
+//       getCust = getRandom();
+//     }
+//     return getCust;
+//   },
+
+//   //here I am returning two arrays within one array. This includes the hour and cookies //
+
+//   calcCookiePerHour: function () {
+//     var perHour = [];
+//     var hour = [];
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
+//     }
+//     return [hour, perHour];
+//   }
+// };
+
+
+// var paris = {
+//   name: paris,
+//   minCust: 20,
+//   maxCust: 38,
+//   avgCookieCust: 2.3,
+//   openTime: 6,
+//   closeTime: 20,
+//   cookieArray: [],
+//   dailyTotal: 0,
+
+
+//   // streamlined with an array //
+
+//   calcCookiesPerHour: function () {
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
+//       this.cookieArray[i - this.openTime] = hourlyTotal;
+//       this.dailyTotal += hourlyTotal;
+//     }
+//   }
+// };
+// paris.calcCookiesPerHour();
+
+// here I am generating a random number within the minCust/maxCust range //
+
+//   calcCustPerHour: function () {
+//     var getCust = getRandom();
+//     while (getCust < this.minCust || getCust > this.maxCust) {
+//       getCust = getRandom();
+//     }
+//     return getCust;
+//   },
+
+//   //here I am returning two arrays within one array. This includes the hour and cookies //
+
+//   calcCookiePerHour: function () {
+//     var perHour = [];
+//     var hour = [];
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
+//     }
+//     return [hour, perHour];
+//   }
+// };
+
+
+// var lima = {
+//   name: lima,
+//   minCust: 2,
+//   maxCust: 16,
+//   avgCookieCust: 4.6,
+//   openTime: 6,
+//   closeTime: 20,
+//   cookieArray: [],
+//   dailyTotal: 0,
+
+
+//   // streamlined with an array //
+
+//   calcCookiesPerHour: function () {
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
+//       this.cookieArray[i - this.openTime] = hourlyTotal;
+//       this.dailyTotal += hourlyTotal;
+//     }
+//   }
+// };
+// lima.calcCookiesPerHour();
+
+// here I am generating a random number within the minCust/maxCust range //
+
+//   calcCustPerHour: function () {
+//     var getCust = getRandom();
+//     while (getCust < this.minCust || getCust > this.maxCust) {
+//       getCust = getRandom();
+//     }
+//     return getCust;
+//   },
+
+//   //here I am returning two arrays within one array. This includes the hour and cookies //
+
+//   calcCookiePerHour: function () {
+//     var perHour = [];
+//     var hour = [];
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
+//     }
+//     return [hour, perHour];
+//   }
+// };
+
+//------------------------------- LAB 07 CONSTRUCTOR ---------------------------------//
+
+
+// Putting together a Constructor //
+
+function CookieStores(name, minCust, maxCust, avgCookieCust, openTime, closeTime) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookieCust = avgCookieCust;
+  this.openTime = openTime;
+  this.closeTime = closeTime;
+  this.cookieArray = [],
+  this.dailyTotal = 0,
 }
 
 
-var seattle = {
-  name: seattle,
-  minCust: 23,
-  maxCust: 65,
-  avgCookieCust: 6.3,
-  openTime: 6,
-  closeTime: 20,
-  cookieArray: [],
-  dailyTotal: 0,
-
-  calcCookiesPerHour: function () {
-    for (var i = this.openTime; i < this.closeTime; i++) {
-      var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
-      this.cookieArray[i - this.openTime] = hourlyTotal;
-      this.dailyTotal += hourlyTotal;
-    }
+CookieStores.prototype.calCookiesPerHour = function () {
+  for (var i = this.openTime; i < this.closeTime; i++) {
+    var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
+    this.cookieArray[i - this.openTime] = hourlyTotal;
+    this.dailyTotal += hourlyTotal;
   }
-};
-seattle.calcCookiesPerHour();
+}
 
 
-// here I am generating a random number within the minCust/maxCust range //
-
-//   calcCustPerHour: function () {
-//     var getCust = getRandom();
-//     while (getCust < this.minCust || getCust > this.maxCust) {
-//       getCust = getRandom();
-//     }
-//     return getCust;
-//   },
-
-//   //here I am returning two arrays within one array. This includes the hour and cookies //
-
-//   calcCookiePerHour: function () {
-//     var perHour = [];
-//     var hour = [];
-//     for (var i = this.openTime; i < this.closeTime; i++) {
-//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
-//     }
-//     return [hour, perHour];
-//   }
-// };
-
-
-var tokyo = {
-  name: tokyo,
-  minCust: 3,
-  maxCust: 24,
-  avgCookieCust: 1.2,
-  openTime: 6,
-  closeTime: 20,
-  cookieArray: [],
-  dailyTotal: 0,
-
-  // streamlined with an array //
-
-  calcCookiesPerHour: function () {
-    for (var i = this.openTime; i < this.closeTime; i++) {
-      var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
-      this.cookieArray[i - this.openTime] = hourlyTotal;
-      this.dailyTotal += hourlyTotal;
-    }
+CookieStores.prototype.renderTable = function () {
+  this.calCookiesPerHour();
+  var newRow = document.createElement('tr');
+  var newHeader = document.createElement('td');
+  newHeader.textContent = `${this.name}`;
+  siteTable.append(newRow);
+  newRow.append(newHeader);
+  for (var i = this.openTime; i < this.closeTime; i++) {
+    newHeader = document.createElement('td');
+    newHeader.textContent = `${this.cookieArray[i]} Cookies`;
+    newRow.append(newHeader);
   }
+  newHeader.textContent = `${parseInt(this.dailyTotal)} Cookies`;
+  newRow.append(newHeader);
 };
-tokyo.calcCookiesPerHour();
 
-//   // here I am generating a random number within the minCust/maxCust range //
+var seattle = new CookieStores('seattle', '23', '65', '6.3', '6', '20');
+CookieStores.push(seattle);
+var tokyo = new CookieStores('tokyo', '3', '24', '1.2', '6', '20');
+CookieStores.push(tokyo);
+var dubai = new CookieStores('dubai', '11', '38', '3.7', '6', '20');
+CookieStores.push(dubai);
+var paris = new CookieStores('paris', '20', '38', '2.3', '6', '20');
+CookieStores.push(paris);
+var lima = new CookieStores('lima', '2', '16', '4.6', '6', '20');
+CookieStores.push(lima);
 
-//   calcCustPerHour: function () {
-//     var getCust = getRandom();
-//     while (getCust < this.minCust || getCust > this.maxCust) {
-//       getCust = getRandom();
-//     }
-//     return getCust;
-//   },
-
-//   //here I am returning two arrays within one array. This includes the hour and cookies //
-
-//   calcCookiePerHour: function () {
-//     var perHour = [];
-//     var hour = [];
-//     for (var i = this.openTime; i < this.closeTime; i++) {
-//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
-//     }
-//     return [hour, perHour];
-//   }
-// };
-
-var dubai = {
-  name: dubai,
-  minCust: 11,
-  maxCust: 38,
-  avgCookieCust: 3.7,
-  openTime: 6,
-  closeTime: 20,
-  cookieArray: [],
-  dailyTotal: 0,
+seattle.renderTable();
+tokyo.renderTable();
+dubai.renderTable();
+paris.renderTable();
+lima.renderTable();
 
 
-  // streamlined with an array //
-
-  calcCookiesPerHour: function () {
-    for (var i = this.openTime; i < this.closeTime; i++) {
-      var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
-      this.cookieArray[i - this.openTime] = hourlyTotal;
-      this.dailyTotal += hourlyTotal;
-    }
-  }
-};
-dubai.calcCookiesPerHour();
-
-// here I am generating a random number within the minCust/maxCust range //
-
-//   calcCustPerHour: function () {
-//     var getCust = getRandom();
-//     while (getCust < this.minCust || getCust > this.maxCust) {
-//       getCust = getRandom();
-//     }
-//     return getCust;
-//   },
-
-//   //here I am returning two arrays within one array. This includes the hour and cookies //
-
-//   calcCookiePerHour: function () {
-//     var perHour = [];
-//     var hour = [];
-//     for (var i = this.openTime; i < this.closeTime; i++) {
-//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
-//     }
-//     return [hour, perHour];
-//   }
-// };
 
 
-var paris = {
-  name: paris,
-  minCust: 20,
-  maxCust: 38,
-  avgCookieCust: 2.3,
-  openTime: 6,
-  closeTime: 20,
-  cookieArray: [],
-  dailyTotal: 0,
 
-
-  // streamlined with an array //
-
-  calcCookiesPerHour: function () {
-    for (var i = this.openTime; i < this.closeTime; i++) {
-      var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
-      this.cookieArray[i - this.openTime] = hourlyTotal;
-      this.dailyTotal += hourlyTotal;
-    }
-  }
-};
-paris.calcCookiesPerHour();
-
-// here I am generating a random number within the minCust/maxCust range //
-
-//   calcCustPerHour: function () {
-//     var getCust = getRandom();
-//     while (getCust < this.minCust || getCust > this.maxCust) {
-//       getCust = getRandom();
-//     }
-//     return getCust;
-//   },
-
-//   //here I am returning two arrays within one array. This includes the hour and cookies //
-
-//   calcCookiePerHour: function () {
-//     var perHour = [];
-//     var hour = [];
-//     for (var i = this.openTime; i < this.closeTime; i++) {
-//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
-//     }
-//     return [hour, perHour];
-//   }
-// };
-
-
-var lima = {
-  name: lima,
-  minCust: 2,
-  maxCust: 16,
-  avgCookieCust: 4.6,
-  openTime: 6,
-  closeTime: 20,
-  cookieArray: [],
-  dailyTotal: 0,
-
-
-  // streamlined with an array //
-
-  calcCookiesPerHour: function () {
-    for (var i = this.openTime; i < this.closeTime; i++) {
-      var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
-      this.cookieArray[i - this.openTime] = hourlyTotal;
-      this.dailyTotal += hourlyTotal;
-    }
-  }
-};
-lima.calcCookiesPerHour();
-
-// here I am generating a random number within the minCust/maxCust range //
-
-//   calcCustPerHour: function () {
-//     var getCust = getRandom();
-//     while (getCust < this.minCust || getCust > this.maxCust) {
-//       getCust = getRandom();
-//     }
-//     return getCust;
-//   },
-
-//   //here I am returning two arrays within one array. This includes the hour and cookies //
-
-//   calcCookiePerHour: function () {
-//     var perHour = [];
-//     var hour = [];
-//     for (var i = this.openTime; i < this.closeTime; i++) {
-//       perHour[i - this.openTime] = (this.getCust() * this.avgCookieCust).toFixed(0);
-//     }
-//     return [hour, perHour];
-//   }
-// };
-
-// Array //
+//------------------------------- LAB 07 TABLE  -------------------------------------------//
 
 var stores = [seattle, tokyo, dubai, paris, lima];
 
+var tableBox = document.createElementbyID('tableBox');
+var siteTable = document.createElement('table');
+function table() {
+  var tableRow = document.createElement('tr');
+  var tableHeader = document.createElement('th');
+  tableBox.append(siteTable);
+  siteTable.append(tableRow);
+  tableRow.append(tableHeader);
+  for (var i = this.openTime; i < this.closeTime; i++) {
+    tableHeader.textContent = openTime;
+    tableHeader = document.createElement('th')
+    tableRow.append(tableHeader);
+  }
+  tableHeader.textContent = ``;
+  tableHeader.append(tableRow);
+  tableHeader = document.createElement('th')
+  tableHeader.textContent = 'Daily Store Total';
+  tableHeader.append(tableRow);
+
+}
+
+table;
+
+
+
+//------------------------------- LAB 06 DOMS  --------------------------------------------//
+// Array //
+
+// var stores = [seattle, tokyo, dubai, paris, lima];
+
 // Working with DOMs - attaching to main tag id //
 
-var main = document.getElementById('cookie-time');
+// var main = document.getElementById('cookie-time');
 
-var total;
-for (var j = 0; j < stores.length; j++) {
-  total = 0;
+// var total;
+// for (var j = 0; j < stores.length; j++) {
+//   total = 0;
 
-  // inserting section //
+//   // inserting section //
 
-  var secElement = document.createElement('section');
-  main.append(secElement);
+//   var secElement = document.createElement('section');
+//   main.append(secElement);
 
-  // inserting header //
+//   // inserting header //
 
-  var h3Element = document.createElement('h3');
-  h3Element.textContent = stores[j].name;
-  secElement.appendChild(h3Element);
+//   var h3Element = document.createElement('h3');
+//   h3Element.textContent = stores[j].name;
+//   secElement.appendChild(h3Element);
 
-  //inserting ul and li elements //
+//   //inserting ul and li elements //
 
-  var ulElement = document.createElement('ul');
-  secElement.appendChild(secElement);
-  secElement.append(ulElement);
+//   var ulElement = document.createElement('ul');
+//   secElement.appendChild(secElement);
+//   secElement.append(ulElement);
 
-  var liElement;
-  var cookieOutput = stores[j].cookiesPerHour();
-  var outPutString;
-  for (var i = 0; i < (stores[j].closeTime-stores[j].openTime); i++){
-    liElement = document.createElement('li');
-    outPutString = `${formatTime(cookieOutput[0][i])}: ${cookieOutput[1][i]} cookies.`;
-    liElement.appendChild(document.createTextNode(outPutString));
-    ulElement.appendChild(liElement);
-    total = total + Number(cookieOutput[1][i]);
-    console.log(total);
-  }
-}
-
-
-//formats military time to am & pm //
-
-function formatTime(input) {
-  if (input < 13) {
-    return `${input}am`;
-  } else {
-    return `${input - 12}pm`;
-  }
-}
-
-formatTime;
-
-
-
-
-
-
-
-
-
-
-
-
-// function CookieStores (name, minCust, maxCust, avgCookieCust, openTime, closeTime, cookieArray, dailyTotal) {
-//   this.name = name;
-//   this.minCust = minCust;
-//   this.maxCust = maxCust;
-//   this.avgCookieCust = avgCookieCust;
-//   this.openTime = openTime;
-//   this.closeTime = closeTime;
-//   this.cookieArray = [];
-//   this.dailyTotal = dailyTotal;
-
-//  var seattle = CookieStores('seattle', '23', '65', '6.3', '6', '20',);
-//  var tokyo = CookieStores('tokyo', '3', '24', '1.2', '6', '20',);
-//  var dubai = CookieStores('dubai', '11', '38', '3.7', '6', '20',);
-//  var paris = CookieStores('paris', '20', '38', '2.3', '6', '20',);
-//  var lima = CookieStores('lima', '2', '16', '4.6', '6', '20',);
+//   var liElement;
+//   var cookieOutput = stores[j].cookiesPerHour();
+//   var outPutString;
+//   for (var i = 0; i < (stores[j].closeTime - stores[j].openTime); i++) {
+//     liElement = document.createElement('li');
+//     outPutString = `${formatTime(cookieOutput[0][i])}: ${cookieOutput[1][i]} cookies.`;
+//     liElement.appendChild(document.createTextNode(outPutString));
+//     ulElement.appendChild(liElement);
+//     total = total + Number(cookieOutput[1][i]);
+//     console.log(total);
+//   }
 // }
+
+
+// //formats military time to am & pm //
+
+// function formatTime(input) {
+//   if (input < 13) {
+//     return `${input}am`;
+//   } else {
+//     return `${input - 12}pm`;
+//   }
+// }
+
+// formatTime;
+
+
+
+//------------------------------- LAB 06 INSTRUCTIONS ---------------------------------//
 
 
 
@@ -345,3 +415,15 @@ formatTime;
 // 6pm: 42 cookies
 // 7pm: 57 cookies
 //  Total: 875 cookies
+
+
+
+//------------------------------- LAB 07 INSTRUCTIONS ---------------------------------//
+
+// 1. Create a new branch for today’s lab. Make sure it has all of your changes from lab 06 so that you can extend the functionality. //
+
+// 2. Replace all of your object literals for the salmon cookie stand with a single constructor function that, when called with the ‘new’ keyword, it creates a new instance. //
+
+// 3. Replace the lists of your data for each store and build a single table of data instead. It shoudl look similar to the following: //
+
+// 4. Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
