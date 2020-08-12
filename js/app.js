@@ -1,8 +1,9 @@
 'use strict';
 
-// function getRandom(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
-// }
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+  //The maximum is inclusive and the minimum is inclusive
+}
 
 //------------------------------- LAB 06 OBJECTS/METHODS ---------------------------------//
 
@@ -233,6 +234,30 @@
 
 //------------------------------- LAB 07 CONSTRUCTOR ---------------------------------//
 
+// var chase = document.getElementById('chase');
+// console.log(chase);
+// var ryanTable = document.getElementbyId('chase');
+// var chaseTable = document.createElement('table');
+// function mytable() {
+//   var tableRow = document.createElement('tr');
+//   var tableHeader = document.createElement('th');
+//   ryanTable.append(chaseTable);
+//   chaseTable.append(tableRow);
+//   tableRow.append(tableHeader);
+//   for (var i = this.openTime; i < this.closeTime; i++) {
+//     tableHeader.textContent = this.openTime;
+//     tableHeader = document.createElement('th');
+//     tableRow.append(tableHeader);
+//   }
+//   tableHeader.textContent = '';
+//   tableHeader.append(tableRow);
+//   tableHeader = document.createElement('th');
+//   tableHeader.textContent = 'Daily Store Total';
+//   tableHeader.append(tableRow);
+
+// }
+
+// mytable();
 
 // Putting together a Constructor //
 
@@ -243,10 +268,19 @@ function CookieStores(name, minCust, maxCust, avgCookieCust, openTime, closeTime
   this.avgCookieCust = avgCookieCust;
   this.openTime = openTime;
   this.closeTime = closeTime;
-  this.cookieArray = [],
-  this.dailyTotal = 0,
+  this.cookieArray = [];
+  this.dailyTotal = 0;
 }
 
+// calcCookiesPerHour: function () {
+//     for (var i = this.openTime; i < this.closeTime; i++) {
+//       var hourlyTotal = Math.ceil(getRandom(this.minCust, this.maxCust) * this.avgCookieSale);
+//       this.cookieArray[i - this.openTime] = hourlyTotal;
+//       this.dailyTotal += hourlyTotal;
+//     }
+//   }
+// };
+// seattle.calcCookiesPerHour();
 
 CookieStores.prototype.calCookiesPerHour = function () {
   for (var i = this.openTime; i < this.closeTime; i++) {
@@ -254,7 +288,7 @@ CookieStores.prototype.calCookiesPerHour = function () {
     this.cookieArray[i - this.openTime] = hourlyTotal;
     this.dailyTotal += hourlyTotal;
   }
-}
+};
 
 
 CookieStores.prototype.renderTable = function () {
@@ -262,7 +296,7 @@ CookieStores.prototype.renderTable = function () {
   var newRow = document.createElement('tr');
   var newHeader = document.createElement('td');
   newHeader.textContent = `${this.name}`;
-  siteTable.append(newRow);
+  // chaseTable.append(newRow);
   newRow.append(newHeader);
   for (var i = this.openTime; i < this.closeTime; i++) {
     newHeader = document.createElement('td');
@@ -291,35 +325,15 @@ paris.renderTable();
 lima.renderTable();
 
 
+// Speaker: Company: Used to a Chancellor at Medieval Times, Education Major and now works as CTO for NewsStory (a housing tech company)Topic: Day in the life of a Junior DeveloperKey Ideas: Key Takeaways: 
+
 
 
 
 //------------------------------- LAB 07 TABLE  -------------------------------------------//
 
-var stores = [seattle, tokyo, dubai, paris, lima];
+// var stores = [seattle, tokyo, dubai, paris, lima];
 
-var tableBox = document.createElementbyID('tableBox');
-var siteTable = document.createElement('table');
-function table() {
-  var tableRow = document.createElement('tr');
-  var tableHeader = document.createElement('th');
-  tableBox.append(siteTable);
-  siteTable.append(tableRow);
-  tableRow.append(tableHeader);
-  for (var i = this.openTime; i < this.closeTime; i++) {
-    tableHeader.textContent = openTime;
-    tableHeader = document.createElement('th')
-    tableRow.append(tableHeader);
-  }
-  tableHeader.textContent = ``;
-  tableHeader.append(tableRow);
-  tableHeader = document.createElement('th')
-  tableHeader.textContent = 'Daily Store Total';
-  tableHeader.append(tableRow);
-
-}
-
-table;
 
 
 
