@@ -12,59 +12,147 @@
 /* ----------------------------- body -------------------------------- */
 
 body {
-  background-image: url(../images/background2.jpg);
+  /* background-image: url(../images/background2.jpg); */
+  background-color: lightcoral;
+  width: 960px;
 
+}
+
+header {
+  background-color: lightslategray;
+}
+
+section {
+  display: inline-block;
+  align-items: center;
+  background-color: lightslategray;
+}
+
+main {
+  background-color: lightslategray;
+}
+
+li {
+  display: inline-block;
+  padding: 20px;
+  margin-top: 25px;
+}
+
+li img {
+  width: 400px;
+  height: 400px;
 }
 
 #salmon1 {
   width: 360px;
   height: auto;
+  margin: 10px;
 }
 
 #main1 {
-  width: 800px;
-  height: auto;
+  width: 860px;
+  height: 400px;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+p {
+  width: 880px;
+  margin: 15px;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
 }
 
 #seattle {
-  width: 300px;
-  height: auto;
-
-}
-
-#tokyo {
-  width: 300px;
-  height: auto;
+  width: 400px;
+  height: 200px;
+  padding: 25px;
 
 }
 
 #dubai {
-  width: 300px;
-  height: auto;
+  width: 400px;
+  height: 200px;
+  padding: 25px;
 
 }
 
+#tokyo {
+  width: 400px;
+  height: 200px;
+  padding: 25px;
+
+}
+
+
 #lima {
-  width: 300px;
-  height: auto;
+  width: 400px;
+  height: 200px;
+  padding: 25px;
 
 }
 
 #paris {
-  width: 300px;
-  height: auto;
+  width: 400px;
+  height: 200px;
+  padding: 25px;
 }
 
 #tba {
-  width: 300px;
-  height: auto;
+  width: 400px;
+  height: 200px;
+  padding: 25px;
+}
+
+div {
+  margin-left: 15px;
+  text-align: center;
+  display: inline-block;
+  padding: 15px;
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 15px;
+  border-color: whitesmoke;
+}
+
+#div1 {
+  margin-left: 175px;
+}
+
+#div2 {
+  margin-left: 400px;
+}
+
+#table {
+  background-color: whitesmoke;
 }
 
 /* ----------------------------- footer -------------------------------- */
 
+footer{
+  margin: 15px;
+  background-color: darkslategray;
+  width: 880px;
+  padding: 10px;
+  color: lightskyblue;
+  font-family: cursive;
+}
+
+article {
+  padding: 2px;
+}
+
 footer img {
-  height: 100px;
-  width: auto;
+  height: 120px;
+  width: 120px;
+  padding-top: 5px;
+}
+
+#last-article {
+  margin-bottom: 0px;
 }
 
 
